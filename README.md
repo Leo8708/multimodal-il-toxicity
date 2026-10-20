@@ -125,8 +125,4 @@ Outer folds group all observations of the same canonical complete ion pair. Cont
 
 Source-data reference recorded in the manuscript: Arakelyan et al., *A comprehensive dataset on cytotoxicity of ionic liquids*, *Scientific Data* **11**, 1379 (2024). [https://doi.org/10.1038/s41597-024-04190-3](https://doi.org/10.1038/s41597-024-04190-3). The article DOI identifies the source publication; it is not a verified download link for this package's exact CSV archive.
 
-Please cite the associated manuscript and the source-data publication when using the respective work. No manuscript DOI or software archive DOI has been assigned in this package.
-
-The supplied study code is released under the [MIT License](LICENSE), copyright (c) 2026 Yaowei Li. Third-party datasets, external software and downloaded pretrained weights retain their own terms and are not relicensed by this repository.
-
-After the repository is published, use GitHub Issues for code questions. Code availability wording and version/archive guidance are in [docs/CODE_AVAILABILITY.md](docs/CODE_AVAILABILITY.md).
+Please cite the associated manuscript and the source-data publication when using the respective work. 
