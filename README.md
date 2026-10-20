@@ -76,6 +76,3 @@ DOI: [10.1038/s41597-024-04190-3](https://doi.org/10.1038/s41597-024-04190-3)
 
 Please cite the associated manuscript and source dataset when using this work.
 
-## License
-
-Released under the MIT License. See [LICENSE](LICENSE) for full terms.
