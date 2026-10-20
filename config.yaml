@@ -1,0 +1,5 @@
+data:
+  dataset_zip: "datasets/csv_datasets.zip"
+  molecular_images_dir: "data/molecular_images"
+  processed_data_path: "data/processed_data.npz"
+  used_dataset_path: "data/used_dataset.xlsx"

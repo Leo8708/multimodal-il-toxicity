@@ -1,0 +1,211 @@
+{
+  "recorded_on": "2026-10-20",
+  "scope": "All distributed files except FILE_MANIFEST.json itself",
+  "core_python_files": 10,
+  "test_python_files": 2,
+  "naming_rule": "Lowercase snake_case; script roles use prepare_, extract_, train_, validate_ and export_; shared module data_utils.",
+  "release_changes": [
+    "Removed Python comments and docstrings",
+    "Renamed scripts, imports and result paths",
+    "Removed three fingerprint-only training scripts and their dedicated loader helper",
+    "Updated documentation"
+  ],
+  "preserved": "Training and statistical logic of retained workflows, as checked by normalized AST comparison under the listed transformations.",
+  "artifact_path_renames": {
+    "paper1_dcnn_desc.json": "dcnn_metrics.json",
+    "paper2_xgb_desc.json": "xgboost_metrics.json",
+    "paper2_rf_desc.json": "random_forest_metrics.json",
+    "paper3_fnn_desc.json": "fnn_metrics.json",
+    "grouped_cv_optimization.json": "grouped_fnn_metrics.json",
+    "grouped_cv_oof_predictions.npz": "grouped_fnn_predictions.npz",
+    "grouped_cv_dcnn_xgb.json": "grouped_dcnn_xgboost_metrics.json",
+    "grouped_cv_dcnn_xgb_oof_predictions.npz": "grouped_dcnn_xgboost_predictions.npz",
+    "oof_fnn_desc.npz": "fnn_oof_predictions.npz",
+    "oof_dcnn.npz": "dcnn_oof_predictions.npz",
+    "oof_xgb.npz": "xgboost_oof_predictions.npz",
+    "optuna_history.json": "fnn_optimization_history.json",
+    "picture/_data": "results/predictions"
+  },
+  "files": [
+    {
+      "path": ".gitignore",
+      "bytes": 338,
+      "sha256": "77101fa0aefcdcf80396dadf11585b8543e3293f20be0b15fbf11bbfb4550c54",
+      "source": "Release documentation, configuration or metadata"
+    },
+    {
+      "path": "config.yaml",
+      "bytes": 197,
+      "sha256": "fc5d8f20e3ce95e749b61efc2004a86b6f68057837c866762b17143316110690",
+      "source": "Release documentation, configuration or metadata"
+    },
+    {
+      "path": "data/README.md",
+      "bytes": 4341,
+      "sha256": "7e9ac0f437a70bf11ee71cc7d32e4e23b25a5d304fdcb5355b775f9c8c3a1dad",
+      "source": "Release documentation, configuration or metadata"
+    },
+    {
+      "path": "data_utils.py",
+      "bytes": 4147,
+      "sha256": "99e619a617d0c05e497cae345382d7446c0f58577b00205a777e0909598c9472",
+      "source": "Study workflow adapted for release naming and removal of comments/docstrings",
+      "original_source_file": "common_data.py",
+      "original_source_sha256": "2ace75de51c86cdf72eb62bb41c27ca7271f7a98fa20c79d9076ecde917f30f7",
+      "normalized_ast_equivalence_verified": true
+    },
+    {
+      "path": "datasets/README.md",
+      "bytes": 2050,
+      "sha256": "3d622942b51f1d74f903d1182606a99f1f0a9c1b42473de0fb3d901200bfaf36",
+      "source": "Release documentation, configuration or metadata"
+    },
+    {
+      "path": "docs/CODE_AVAILABILITY.md",
+      "bytes": 2168,
+      "sha256": "b1420e760ad4027f1529a6964018c19437b3d01ae75988e46d268f96e96c8684",
+      "source": "Release documentation, configuration or metadata"
+    },
+    {
+      "path": "docs/METHODS_AND_LIMITATIONS.md",
+      "bytes": 4902,
+      "sha256": "51b79690a3f5d2f5400367bf1f779980bc8310ac0c94b0b047bcd2470f916022",
+      "source": "Release documentation, configuration or metadata"
+    },
+    {
+      "path": "docs/VERIFICATION.md",
+      "bytes": 2748,
+      "sha256": "0ae5700ebd12f100f5777ec1a4fd207b3482d9ee9580b30d0c252aaca8b5a9b5",
+      "source": "Release documentation, configuration or metadata"
+    },
+    {
+      "path": "environment_snapshot.json",
+      "bytes": 798,
+      "sha256": "9090aecbfef42c93c9b7b56c1e551767ced6f025c11f5a5050442b205a1b2e9e",
+      "source": "Release documentation, configuration or metadata"
+    },
+    {
+      "path": "export_dcnn_xgboost_predictions.py",
+      "bytes": 6016,
+      "sha256": "daf8dcea0c8e8319381744f36bc42a3e68d1bb137a265e16b935b985f5657861",
+      "source": "Study workflow adapted for release naming and removal of comments/docstrings",
+      "original_source_file": "prepare_oof_dcnn_xgb.py",
+      "original_source_sha256": "df21d23548e2d14403b87081398a70069a4a5dffa529a93dd6165d7c12ab72ef",
+      "normalized_ast_equivalence_verified": true
+    },
+    {
+      "path": "export_fnn_predictions.py",
+      "bytes": 4443,
+      "sha256": "74eefb17be8bc17bb6610ad1ce32af51d4eeb31181ee5ac9dd6ca5715c3090fc",
+      "source": "Study workflow adapted for release naming and removal of comments/docstrings",
+      "original_source_file": "prepare_fig_data.py",
+      "original_source_sha256": "398fc20e38c25a4dc554fbf2a7d0961c38d02f2a1f720e17d8aaae452e288030",
+      "normalized_ast_equivalence_verified": true
+    },
+    {
+      "path": "extract_descriptors.py",
+      "bytes": 2596,
+      "sha256": "fa5651eed3b5152dd862abd2eb485b9d98b9f9e2e6af6a1f02a3f19b4425d9fb",
+      "source": "Study workflow adapted for release naming and removal of comments/docstrings",
+      "original_source_file": "extract_rdkit_desc.py",
+      "original_source_sha256": "dffade552cb1be2cdc6e7d29287dc682510ebb338e893d40696ee70857334ab2",
+      "normalized_ast_equivalence_verified": true
+    },
+    {
+      "path": "LICENSE",
+      "bytes": 1066,
+      "sha256": "1638ec69741e3d58a41bd9c7e7ee6bd5c28f9f650a3d32e45b10582473a43b5a",
+      "source": "Release documentation, configuration or metadata"
+    },
+    {
+      "path": "prepare_dataset.py",
+      "bytes": 9149,
+      "sha256": "cb356826df188f36753d1a69f3f957ebe022c6f08c73bc35eb13ee579a688dee",
+      "source": "Study workflow adapted for release naming and removal of comments/docstrings",
+      "original_source_file": "01_prepare_data.py",
+      "original_source_sha256": "37f4db575d4d641b5bb73266bb874d12d78cc6f3306f2e0af9af5f8629edde3e",
+      "normalized_ast_equivalence_verified": true
+    },
+    {
+      "path": "README.md",
+      "bytes": 10509,
+      "sha256": "d4257ff60e0b80b2474981d1d796abfff1187fec3dbc56d36db0e8c84e56760b",
+      "source": "Release documentation, configuration or metadata"
+    },
+    {
+      "path": "requirements-dev.txt",
+      "bytes": 34,
+      "sha256": "29c2a9d7de7863916f8784cd688b50c65974e9435c7abde28ebc78f583d3bbd1",
+      "source": "Release documentation, configuration or metadata"
+    },
+    {
+      "path": "requirements.txt",
+      "bytes": 175,
+      "sha256": "aca044606896e62c3efecc29d8100b7cbf620549898cdab1b8c08a46e885b931",
+      "source": "Release documentation, configuration or metadata"
+    },
+    {
+      "path": "tests/test_grouped_dcnn_xgboost.py",
+      "bytes": 847,
+      "sha256": "c8b551e223c7a4653d529a97cf268d52d2098dc788c16ed2d29c095295f8ab1f",
+      "source": "Selected existing data-independent development checks, adapted for release module names and comment removal",
+      "original_source_file": "tests/test_grouped_cv_dcnn_xgb.py",
+      "original_source_sha256": "512b14ecd6fc1e5d6353e6f0f786695ec196b726e4896f9ba9eff064f6a3b876",
+      "normalized_ast_equivalence_verified": true
+    },
+    {
+      "path": "tests/test_grouped_fnn.py",
+      "bytes": 6652,
+      "sha256": "23bc1fcbcbb03845ffe0a603f800f2fe5b19a4cb0f28e0abfea4468ed2b103a9",
+      "source": "Selected existing data-independent development checks, adapted for release module names and comment removal",
+      "original_source_file": "tests/test_grouped_cv_optimize.py",
+      "original_source_sha256": "3608a33d3b6847b57be040491eecbaf0d807fca235dd60c84642fad2db59b463",
+      "normalized_ast_equivalence_verified": true
+    },
+    {
+      "path": "train_dcnn.py",
+      "bytes": 8464,
+      "sha256": "55f67465918e06c2c6f7101fe621e3596a18119f7cce439c50892829eddb6fc6",
+      "source": "Study workflow adapted for release naming and removal of comments/docstrings",
+      "original_source_file": "paper1_dcnn_desc.py",
+      "original_source_sha256": "75448c5a4fcc6a4618c3ef86a582ed41fa8b1e5c49a2e5db4fbbd63370480b3a",
+      "normalized_ast_equivalence_verified": true
+    },
+    {
+      "path": "train_fnn.py",
+      "bytes": 4862,
+      "sha256": "c0157c5a8fa36c304ec83449a57b1ab7b0969ee48cebadd314ef42ce15837b37",
+      "source": "Study workflow adapted for release naming and removal of comments/docstrings",
+      "original_source_file": "paper3_fnn_desc.py",
+      "original_source_sha256": "78b6f6535ebfabc504fe1607649178461ce6bb4750175e145a85e2d80c077679",
+      "normalized_ast_equivalence_verified": true
+    },
+    {
+      "path": "train_xgboost.py",
+      "bytes": 8882,
+      "sha256": "e02d05c25b9ede78c165bdc3f3b134cb49b84ca793a3803891cad3fa4b84d14c",
+      "source": "Study workflow adapted for release naming and removal of comments/docstrings",
+      "original_source_file": "paper2_xgb_desc.py",
+      "original_source_sha256": "07429d2e621965e137934e249a8b8e1ce396e9804bf6b7bc09b5ebbec72e2eb1",
+      "normalized_ast_equivalence_verified": true
+    },
+    {
+      "path": "validate_grouped_dcnn_xgboost.py",
+      "bytes": 20950,
+      "sha256": "2409502b8c783d5bd58ed3e68705ab7616f4b5972982212bbc0dda047dd8e618",
+      "source": "Study workflow adapted for release naming and removal of comments/docstrings",
+      "original_source_file": "grouped_cv_dcnn_xgb.py",
+      "original_source_sha256": "b962bfe7a1df0405ce14ecbb5715e39909c1c983861455fc7411e87b93d78532",
+      "normalized_ast_equivalence_verified": true
+    },
+    {
+      "path": "validate_grouped_fnn.py",
+      "bytes": 63825,
+      "sha256": "b20ea022cf1b2a413b6f051be712176452172f938d3ce2dad46572233107aa32",
+      "source": "Study workflow adapted for release naming and removal of comments/docstrings",
+      "original_source_file": "grouped_cv_optimize.py",
+      "original_source_sha256": "b38445ee4b3284fee8cdf43f3ea93fc6759dd17ea4030c6ad9a6b7352eb46acd",
+      "normalized_ast_equivalence_verified": true
+    }
+  ]
+}
