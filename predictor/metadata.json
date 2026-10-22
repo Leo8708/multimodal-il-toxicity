@@ -1,0 +1,92 @@
+{
+  "format_version": 1,
+  "model_id": "single_il_fnn_seed42",
+  "created_at": "2026-10-21T15:33:04.036990+00:00",
+  "architecture": {
+    "input_dim": 2756,
+    "hidden1": 512,
+    "hidden2": 32
+  },
+  "cell_categories": [
+    "A549",
+    "CaCo-2",
+    "HaCat",
+    "HeLa",
+    "IPC-81",
+    "K562",
+    "MCF-7",
+    "MDA-MB-231",
+    "Other"
+  ],
+  "descriptor_names": [
+    "MolLogP",
+    "TPSA",
+    "NumHDonors",
+    "NumHAcceptors",
+    "NumAromaticRings",
+    "NumRotatableBonds",
+    "MolMR",
+    "FractionCSP3",
+    "NumHeavyAtoms",
+    "RingCount",
+    "NumSaturatedRings",
+    "NumAliphaticRings",
+    "BertzCT",
+    "LabuteASA",
+    "BalabanJ",
+    "Chi0",
+    "Chi1",
+    "HallKierAlpha",
+    "Kappa1",
+    "NumValenceElectrons"
+  ],
+  "feature_order": [
+    "fingerprint",
+    "image",
+    "molecular_weight",
+    "cell_one_hot",
+    "descriptors"
+  ],
+  "fingerprint": {
+    "maccs_bits": 166,
+    "morgan_bits": 2048,
+    "radius": 2
+  },
+  "image": {
+    "size": 224,
+    "encoder": "resnet18",
+    "weights": "IMAGENET1K_V1"
+  },
+  "training": {
+    "seed": 42,
+    "device": "cuda",
+    "epochs": 180,
+    "best_epoch": 73,
+    "batch_size": 128,
+    "optimizer": "Adam",
+    "learning_rate": 0.001,
+    "loss": "sqrt(mean_squared_error + 1e-8)",
+    "gradient_clip_norm": 1.0,
+    "checkpoint_selection": "minimum validation RMSE",
+    "validation_split": "GroupShuffleSplit(test_size=0.1)",
+    "group_definition": "RDKit canonical isomeric SMILES",
+    "excluded_canonical_smiles": "CCCC[n+]1ccn(C)c1.[Cl-]",
+    "n_rows": 11016,
+    "n_groups": 1223,
+    "n_train": 9957,
+    "n_validation": 969,
+    "n_excluded": 90,
+    "n_train_groups": 1099,
+    "n_validation_groups": 123,
+    "groups_disjoint": true,
+    "descriptor_scaler_fit": "training rows only",
+    "image_feature_scaling": "none",
+    "molecular_weight_scaling": "none",
+    "example_target_used": false,
+    "deterministic_algorithms": true
+  },
+  "target": {
+    "name": "log10_toxicity_uM",
+    "conversion": "concentration_uM = 10 ** prediction"
+  }
+}

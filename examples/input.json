@@ -1,0 +1,7 @@
+{
+  "id": "bmim_cl_hela",
+  "name": "1-Butyl-3-methylimidazolium chloride ([BMIM]Cl)",
+  "smiles": "[Cl-].C1=C[N+](=CN1C)CCCC",
+  "cell_line": "HeLa",
+  "molecular_weight": 174.675
+}

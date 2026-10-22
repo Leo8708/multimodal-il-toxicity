@@ -1,0 +1,2 @@
+id,name,smiles,canonical_smiles,cell_line,molecular_weight_g_mol,predicted_log10_toxicity_uM,predicted_toxicity_uM,predicted_toxicity_mM,model_id
+bmim_cl_hela,1-Butyl-3-methylimidazolium chloride ([BMIM]Cl),[Cl-].C1=C[N+](=CN1C)CCCC,CCCC[n+]1ccn(C)c1.[Cl-],HeLa,174.675,4.010781764984131,10251.36660816231,10.25136660816231,single_il_fnn_seed42
